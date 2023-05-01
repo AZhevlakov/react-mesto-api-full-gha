@@ -1,0 +1,20 @@
+.page__container {
+  box-sizing: border-box;
+  max-width: 880px;
+  min-height: 100%;
+  padding: 45px 0 60px;
+  margin: 0 auto;
+}
+
+@media (max-width: 959px) {
+  .page__container {
+    max-width: 581px;
+  }
+}
+
+@media (max-width: 659px) {
+  .page__container {
+    max-width: 282px;
+    padding: 28px 0 36px;
+  }
+}

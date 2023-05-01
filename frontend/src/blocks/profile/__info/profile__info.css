@@ -1,0 +1,16 @@
+.profile__info {
+  box-sizing: border-box;
+  flex-grow: 1;
+  max-width: 100%;
+  display: grid;
+  grid-template-areas:
+    "name edit"
+    "job job";
+  justify-content: start;
+}
+
+@media (max-width: 659px) {
+  .profile__info {
+    margin: 26px 0 33px;
+  }
+}

@@ -1,0 +1,10 @@
+.form__submit_signin {
+  margin: 180px 0 0;
+  color: #000;
+  background-color: #fff;
+  transition: .3s;
+}
+
+.form__submit_signin:hover {
+  background-color: rgba(255, 255, 255, .8);
+}

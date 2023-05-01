@@ -1,0 +1,21 @@
+.photo-card__delete {
+  width: 18px;
+  height: 19px;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: url('../../../images/trash-icon.svg') center no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  transition: opacity .3s ease-in;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 0;
+}
+
+.photo-card__delete:hover {
+  opacity: .6;
+}
+

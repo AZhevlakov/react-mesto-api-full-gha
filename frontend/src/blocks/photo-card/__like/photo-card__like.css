@@ -1,0 +1,16 @@
+.photo-card__like {
+  width: 22px;
+  height: 19px;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: url('../../../images/like-disabled.svg') center no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.photo-card__like:hover {
+  opacity: .5;
+}

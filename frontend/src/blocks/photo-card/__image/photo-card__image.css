@@ -1,0 +1,10 @@
+.photo-card__image {
+  display: block;
+  width: 282px;
+  height: 282px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}

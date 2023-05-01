@@ -1,0 +1,11 @@
+.form__signin-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #fff;
+  transition: .3s;
+}
+
+.form__signin-link:hover {
+  opacity: .6;
+}

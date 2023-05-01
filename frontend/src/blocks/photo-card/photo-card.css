@@ -1,0 +1,10 @@
+.photo-card {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

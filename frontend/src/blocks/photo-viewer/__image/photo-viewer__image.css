@@ -1,0 +1,7 @@
+.photo-viewer__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  display: block;
+  line-height: 0;
+  object-fit: contain;
+}

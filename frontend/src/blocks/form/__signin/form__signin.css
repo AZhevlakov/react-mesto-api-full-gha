@@ -1,0 +1,9 @@
+.form__signin {
+  margin: 15px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.21;
+}
