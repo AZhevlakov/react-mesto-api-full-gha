@@ -1,4 +1,4 @@
-export const BASE_URL_AUTH = 'https://auth.nomoreparties.co';
+export const BASE_URL_AUTH = 'http://api.project.students.nomoredomains.monster';
 
 const checkStatus = (res) => {
   if (res.ok) {
