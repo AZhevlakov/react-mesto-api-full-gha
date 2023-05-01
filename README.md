@@ -6,7 +6,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.57.86
+IP 158.160.57.86
 
 Frontend https://project.students.nomoredomains.monster
 
