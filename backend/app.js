@@ -5,8 +5,8 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 // const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
+const cors = require('cors');
 const { limiterConfig } = require('./config');
-const cors = require('./middlewares/cors');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -18,7 +18,7 @@ const limiter = rateLimit(limiterConfig);
 
 app.use(helmet());
 app.use(limiter);
-app.use(cors);
+
 // app.use(cookieParser());
 app.use(express.json());
 
@@ -26,6 +26,7 @@ mongoose.connect(DB_ADDRESS);
 
 app.use(requestLogger); // логгер запросов
 
+app.use(cors());
 // для ревью - для проверки восстановления сервера
 app.get('/crash-test', () => {
   setTimeout(() => {
