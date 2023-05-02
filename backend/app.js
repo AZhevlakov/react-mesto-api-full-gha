@@ -41,5 +41,5 @@ app.use(errors()); // обработчик ошибок celebrate
 app.use(errorHandler); // централизованный обработчик ошибок
 
 app.listen(PORT, () => {
-  console.log('Сервер запущен');
+  console.log('Сервер запущен'); // eslint-disable-line no-console
 });
