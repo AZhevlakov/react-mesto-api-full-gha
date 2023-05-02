@@ -1,5 +1,5 @@
 const { celebrate, Joi } = require('celebrate');
-const { urlRegExp, passwordRegExp } = require('../utils/constants');
+const { urlRegExp } = require('../utils/constants');
 
 // const authValidate = celebrate({
 //   headers: Joi.object().keys({
@@ -10,7 +10,7 @@ const { urlRegExp, passwordRegExp } = require('../utils/constants');
 const loginValidate = celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),
-    password: Joi.string().min(8).regex(passwordRegExp).required(),
+    password: Joi.string().required(),
   }),
 });
 
@@ -20,7 +20,7 @@ const registerValidate = celebrate({
     about: Joi.string().min(2).max(30).default('Исследователь'),
     avatar: Joi.string().regex(urlRegExp).default('https://pictures.s3.yandex.net/resources/jacques-cousteau_1604399756.png'),
     email: Joi.string().email().required(),
-    password: Joi.string().min(8).regex(passwordRegExp).required(),
+    password: Joi.string().required(),
   }),
 });
 

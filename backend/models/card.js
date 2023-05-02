@@ -15,7 +15,7 @@ const cardSchema = new mongoose.Schema(
         validator(url) {
           return urlRegExp.test(url);
         },
-        message: 'Is not a valid url',
+        message: 'Некорректная ссылка',
       },
       required: true,
     },
