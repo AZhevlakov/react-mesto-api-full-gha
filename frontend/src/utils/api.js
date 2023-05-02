@@ -19,7 +19,10 @@ class Api {
   getUserInfo() {
     return this._request(`${this._baseUrl}/users/me`, {
       method: 'GET',
-      headers: this._headers
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     })
   }
 
@@ -27,7 +30,10 @@ class Api {
   updateUserInfo(name, about) {
     return this._request(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
       body: JSON.stringify({
         name: name,
         about: about
@@ -39,7 +45,10 @@ class Api {
   getInitialCards() {
     return this._request(`${this._baseUrl}/cards`, {
       method: 'GET',
-      headers: this._headers
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     })
   }
 
@@ -47,7 +56,10 @@ class Api {
   addCard(cardName, cardLink) {
     return this._request(`${this._baseUrl}/cards`, {
       method: 'POST',
-      headers: this._headers,
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
       body: JSON.stringify({
         name: cardName,
         link: cardLink
@@ -59,7 +71,10 @@ class Api {
   deleteCard(cardId) {
     return this._request(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
-      headers: this._headers
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     })
   }
 
@@ -69,7 +84,10 @@ class Api {
 
     return this._request(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: method,
-      headers: this._headers
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     })
   }
 
@@ -77,7 +95,10 @@ class Api {
   updateAvatar(avatarLink) {
     return this._request(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        ...this._headers,
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
       body: JSON.stringify({
         avatar: avatarLink
       })
@@ -86,9 +107,8 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://api.project.students.nomoredomains.monster',
+  baseUrl: 'https://api.project.students.nomoredomains.monster',
   headers: {
-    authorization: `Bearer ${localStorage.getItem('token')}`,
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   }
 });
